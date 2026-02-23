@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contact - Munna Catering Services</title>
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="../images/mjc.png" type="image/png" />
+    <link rel="stylesheet" href="../css/reset.min.css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
+    <section id="wrap">
+      <nav id="navbar">
+        <img src="../images/mjcw.png" />
+        <input type="checkbox" id="burger-toggle" />
+        <div id="burger">
+          <div class="burger-slice"></div>
+          <div class="burger-slice"></div>
+          <div class="burger-slice"></div>
+        </div>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#" id="active">Contact Us</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </nav>
+
+      <main id="container-wrap">
+        <div id="container" class="glass-panel">
+          <div class="contact-box">
+            <h2>Connect With Us</h2>
+            <p class="contact-link">Call us: <strong>+91 7011388470</strong></p>
+
+            <a
+              href="https://wa.me/917011388470"
+              target="_blank"
+              class="contact-link"
+              style="color: #25d366"
+            >
+              <i class="fa fa-whatsapp"></i> WhatsApp Chat
+            </a>
+
+            <a
+              href="mailto:munnacateringservices@gmail.com"
+              class="contact-link"
+              style="color: var(--primary-brown)"
+            >
+              <i class="fa fa-envelope"></i> Email Us
+            </a>
+          </div>
+
+          <div class="contact-box">
+            <h2>Send a Message</h2>
+            <form action="https://formspree.io/f/mwkgllqd" method="post">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Your Name"
+              />
+
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                name="_replyto"
+                id="email"
+                required
+                placeholder="Your Email"
+              />
+
+              <label for="comment">Message</label>
+              <textarea
+                name="message"
+                id="comment"
+                rows="4"
+                placeholder="How can we help?"
+              ></textarea>
+
+              <button type="submit" id="button">
+                Send <i class="fa fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </section>
+
+    <script src="../dist/js/script.js"></script>
+  </body>
+</html>
