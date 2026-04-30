@@ -2,69 +2,32 @@
 
 # Munna Catering Services
 
-### *Premium Catering for Every Occasion*
+### *Good food. Memorable occasions. Done right.*
 
-**Client-facing catering website built to present services clearly, earn trust fast, and drive real bookings.**
-
-[![Stack](https://img.shields.io/badge/Stack-HTML%20%C2%B7%20CSS%20%C2%B7%20JavaScript-E67E22?style=for-the-badge&labelColor=2B1D12)](https://github.com/TheAlgo7/munna-catering-frontend)
-[![Build](https://img.shields.io/badge/Build-Babel%20Pipeline-E67E22?style=for-the-badge&labelColor=2B1D12)](https://github.com/TheAlgo7/munna-catering-frontend)
-[![Focus](https://img.shields.io/badge/Focus-Services%20%26%20Conversion-E67E22?style=for-the-badge&labelColor=2B1D12)](https://github.com/TheAlgo7/munna-catering-frontend)
-
-*This repo is a business website, not a demo theme. It is designed to help a real catering brand look established, trustworthy, and easy to contact.*
+[![Stack](https://img.shields.io/badge/Stack-HTML%20·%20CSS%20·%20JavaScript-E67E22?style=flat-square&labelColor=111111)](https://github.com/TheAlgo7/munna-catering-frontend)
+[![Type](https://img.shields.io/badge/Type-Client%20Website-E67E22?style=flat-square&labelColor=111111)](https://github.com/TheAlgo7/munna-catering-frontend)
+[![Built by](https://img.shields.io/badge/Built%20by-The%20Algothrim-E67E22?style=flat-square&labelColor=111111)](https://thealgothrim.com)
 
 </div>
 
----
+![Hero](./docs/assets/hero.png)
 
-## Overview
+A real business needed a real website — one that earns trust before a visitor reads a single word. Munna Catering Services is a static client site built to present a catering brand with warmth, credibility, and a clear path to contact. Food-forward visuals, clean service layout, and a direct inquiry flow — nothing clever, everything useful.
 
-Munna Catering Services is a static frontend built for presentation and conversion. It showcases catering categories, event support, and crockery rental in a way that feels polished without requiring a complicated stack to maintain.
+## Project Brief
 
-The emphasis is on clarity, appetite appeal, and business usefulness.
+**Client:** Munna Catering Services
+**Goal:** Establish a digital presence that makes the business look established, trustworthy, and easy to hire.
+**What it does:** Showcases service categories and event support, builds appetite appeal through imagery, and drives bookings through prominent contact surfaces.
 
-## What The Site Covers
+## What the Site Covers
 
-- **Service presentation** across multiple catering categories.
-- **Crockery and event support** for broader booking value.
-- **Image-first storytelling** that helps the business feel tangible.
-- **Direct-contact flow** so the site supports inquiries instead of just looking pretty.
-
-## Quick Start
-
-```bash
-git clone https://github.com/TheAlgo7/munna-catering-frontend.git
-cd munna-catering-frontend
-python -m http.server 8000
-```
-
-Open `http://localhost:8000`.
-
-Alternative:
-
-```bash
-npx serve .
-```
-
-If you want the JavaScript build output:
-
-```bash
-npm install
-npm run build
-```
-
-## Project Structure
-
-```text
-munna-catering-frontend/
-├── index.html
-├── html/
-├── css/
-├── js/
-├── images/
-├── dist/
-├── .babelrc
-└── package.json
-```
+- **Services** — Catering categories across weddings, corporate events, private parties, and social gatherings
+- **Menu showcase** — Food-forward presentation with hygiene and freshness as trust signals
+- **Crockery & event support** — Broader offering beyond just food, increasing booking value
+- **Gallery** — Visual storytelling that makes the business feel tangible before first contact
+- **Testimonials** — Social proof for new visitors
+- **Contact & inquiry** — Direct call-to-action and booking entry point
 
 ## Stack
 
@@ -72,18 +35,34 @@ munna-catering-frontend/
 | --- | --- |
 | Frontend | HTML, CSS, Vanilla JavaScript |
 | Build | Babel |
-| Linting | ESLint |
 | Output | Static deployable frontend |
 
-## Design Language
+<details>
+<summary>Quick Start</summary>
 
-- **Food-forward presentation.** Rich visuals and warm tones without clutter.
-- **Business-first structure.** Services and inquiry intent come before experiments.
-- **Static by choice.** Easy to host, easy to maintain, easy to hand off.
-- **Client-facing clarity.** The design is meant to reassure, not confuse.
+```bash
+git clone https://github.com/TheAlgo7/munna-catering-frontend.git
+cd munna-catering-frontend
+python -m http.server 8000
+```
+
+Open `http://localhost:8000`. Alternatively:
+
+```bash
+npx serve .
+```
+
+For the JavaScript build output:
+
+```bash
+npm install
+npm run build
+```
+
+</details>
 
 <div align="center">
 
-Built for a **real business, real customers, and real conversion**.
+Built for a **real business, real customers, and real conversion** — by **[The Algothrim](https://thealgothrim.com)**
 
 </div>
