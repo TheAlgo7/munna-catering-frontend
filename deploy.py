@@ -1,6 +1,7 @@
 import os
 import json
 import ftplib
+import time
 
 # Load FTP config
 config_path = 'ftp-config.json'
@@ -11,23 +12,46 @@ if not os.path.exists(config_path):
 with open(config_path, 'r') as f:
     config = json.load(f)
 
-print(f"Connecting to {config['host']} via FTP...")
-ftp = ftplib.FTP()
-ftp.connect(config['host'], config.get('port', 21))
-ftp.login(config['username'], config['password'])
+def get_ftp_connection():
+    print(f"Connecting to {config['host']} via FTP...")
+    ftp = ftplib.FTP()
+    ftp.connect(config['host'], config.get('port', 21), timeout=60)
+    ftp.login(config['username'], config['password'])
+    ftp.set_pasv(True)
+    # InfinityFree projects must be uploaded to /htdocs
+    try:
+        ftp.cwd('htdocs')
+    except Exception:
+        pass
+    return ftp
+
+ftp = get_ftp_connection()
 print("Connected successfully!")
 
-# InfinityFree projects must be uploaded to /htdocs
-try:
-    ftp.cwd('htdocs')
-    print("Changed directory to 'htdocs'")
-except Exception:
-    print("Could not cwd to 'htdocs', uploading to root directory.")
-
-def upload_file(local_path, remote_path):
-    print(f"Uploading {local_path} -> {remote_path}...")
-    with open(local_path, 'rb') as f:
-        ftp.storbinary(f'STOR {remote_path}', f)
+def upload_file_with_retry(local_path, remote_path, retries=3):
+    global ftp
+    for attempt in range(retries):
+        try:
+            print(f"Uploading {local_path} -> {remote_path} (Attempt {attempt+1}/{retries})...")
+            with open(local_path, 'rb') as f:
+                ftp.storbinary(f'STOR {remote_path}', f)
+            print("Upload successful!")
+            return True
+        except Exception as e:
+            print(f"Upload failed: {e}")
+            if attempt < retries - 1:
+                print("Waiting 3 seconds to reconnect and retry...")
+                time.sleep(3)
+                try:
+                    ftp.quit()
+                except Exception:
+                    pass
+                try:
+                    ftp = get_ftp_connection()
+                except Exception as rc_err:
+                    print(f"Reconnection failed: {rc_err}")
+            else:
+                raise e
 
 def ensure_remote_dir(remote_dir):
     parts = remote_dir.split('/')
@@ -47,27 +71,32 @@ def ensure_remote_dir(remote_dir):
 directories_to_upload = ['css', 'html', 'js', 'dist', 'images']
 files_to_upload = ['index.html']
 
-# Direct file uploads
-for file in files_to_upload:
-    if os.path.exists(file):
-        upload_file(file, file)
+try:
+    # Direct file uploads
+    for file in files_to_upload:
+        if os.path.exists(file):
+            upload_file_with_retry(file, file)
 
-# Directory recursive uploads
-for dir_name in directories_to_upload:
-    if not os.path.exists(dir_name):
-        continue
-    for root, dirs, files in os.walk(dir_name):
-        # Create corresponding remote directory
-        relative_dir = os.path.relpath(root, '.')
-        # Replace Windows backslash with forward slash
-        remote_dir = relative_dir.replace('\\', '/')
-        ensure_remote_dir(remote_dir)
-        
-        for file in files:
-            local_path = os.path.join(root, file)
-            relative_file = os.path.relpath(local_path, '.')
-            remote_file = relative_file.replace('\\', '/')
-            upload_file(local_path, remote_file)
+    # Directory recursive uploads
+    for dir_name in directories_to_upload:
+        if not os.path.exists(dir_name):
+            continue
+        for root, dirs, files in os.walk(dir_name):
+            # Create corresponding remote directory
+            relative_dir = os.path.relpath(root, '.')
+            # Replace Windows backslash with forward slash
+            remote_dir = relative_dir.replace('\\', '/')
+            ensure_remote_dir(remote_dir)
+            
+            for file in files:
+                local_path = os.path.join(root, file)
+                relative_file = os.path.relpath(local_path, '.')
+                remote_file = relative_file.replace('\\', '/')
+                upload_file_with_retry(local_path, remote_file)
+finally:
+    try:
+        ftp.quit()
+    except Exception:
+        pass
 
-ftp.quit()
 print("Deployment completed successfully!")
