@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Contact - Munna Catering Services</title>
-    <meta name="viewport" content="width=device-width" />
+    <title>Contact Us - Munna Catering Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reach out to Munna Catering Services. Inquire about catering budgets, custom menus, or book your upcoming celebrations with our specialists." />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -18,84 +19,141 @@
     <link rel="stylesheet" href="../css/reset.min.css" />
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
   </head>
-  <body>
+  <body class="dark-theme">
     <section id="wrap">
+      <!-- Floating Navbar -->
       <nav id="navbar">
-        <img src="../images/mjcw.png" />
+        <a href="../index.html">
+          <img src="../images/mjcw.png" class="logo" alt="Munna Catering Logo" />
+        </a>
         <input type="checkbox" id="burger-toggle" />
-        <div id="burger">
+        <label for="burger-toggle" id="burger">
           <div class="burger-slice"></div>
           <div class="burger-slice"></div>
           <div class="burger-slice"></div>
-        </div>
+        </label>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="#" id="active">Contact Us</a></li>
           <li><a href="./about.html">About Us</a></li>
+          <li><a href="#" id="active">Contact Us</a></li>
+          <li>
+            <!-- Theme Toggler -->
+            <div class="theme-switch-container">
+              <label class="theme-switch" for="theme-checkbox">
+                <input type="checkbox" id="theme-checkbox" />
+                <div class="slider-switch">
+                  <i class="fa fa-moon-o"></i>
+                  <i class="fa fa-sun-o"></i>
+                </div>
+              </label>
+            </div>
+          </li>
         </ul>
       </nav>
 
+      <!-- Glassmorphic Booking Portal Grid -->
       <main id="container-wrap">
         <div id="container" class="glass-panel">
+          
+          <!-- Left Column: Direct Connection Channels -->
           <div class="contact-box">
             <h2>Connect With Us</h2>
-            <p class="contact-link">Call us: <strong>+91 7011388470</strong></p>
+            <p style="margin-bottom: 30px;">Choose a communication channel below to connect directly with our event managers.</p>
+            
+            <div class="contact-links-grid">
+              <a href="tel:+917011388470" class="contact-card phone-channel">
+                <i class="fa fa-phone"></i>
+                <div class="contact-card-info">
+                  <h4>Call Our Hotline</h4>
+                  <p>+91 7011388470</p>
+                </div>
+              </a>
 
-            <a
-              href="https://wa.me/917011388470"
-              target="_blank"
-              class="contact-link"
-              style="color: #25d366"
-            >
-              <i class="fa fa-whatsapp"></i> WhatsApp Chat
-            </a>
+              <a href="https://wa.me/917011388470" target="_blank" class="contact-card whatsapp-channel">
+                <i class="fa fa-whatsapp"></i>
+                <div class="contact-card-info">
+                  <h4>WhatsApp Chat</h4>
+                  <p>Instant event planner support</p>
+                </div>
+              </a>
 
-            <a
-              href="mailto:munnacateringservices@gmail.com"
-              class="contact-link"
-              style="color: var(--primary-brown)"
-            >
-              <i class="fa fa-envelope"></i> Email Us
-            </a>
+              <a href="mailto:munnacateringservices@gmail.com" class="contact-card email-channel">
+                <i class="fa fa-envelope"></i>
+                <div class="contact-card-info">
+                  <h4>Send An Email</h4>
+                  <p>munnacateringservices@gmail.com</p>
+                </div>
+              </a>
+            </div>
           </div>
 
+          <!-- Right Column: Premium Floating Inquiry Form -->
           <div class="contact-box">
             <h2>Send a Message</h2>
-            <form action="https://formspree.io/f/mwkgllqd" method="post">
-              <label for="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                required
-                placeholder="Your Name"
-              />
+            <p style="margin-bottom: 25px;">Fill out the form below and we will get back to you with menu choices and custom quote ranges.</p>
+            
+            <form action="https://formspree.io/f/mwkgllqd" method="post" id="contact-form">
+              <!-- Floating Name -->
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">Your Full Name</label>
+              </div>
 
-              <label for="email">Email address</label>
-              <input
-                type="email"
-                name="_replyto"
-                id="email"
-                required
-                placeholder="Your Email"
-              />
+              <!-- Floating Email -->
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="_replyto"
+                  id="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Your Email Address</label>
+              </div>
 
-              <label for="comment">Message</label>
-              <textarea
-                name="message"
-                id="comment"
-                rows="4"
-                placeholder="How can we help?"
-              ></textarea>
+              <!-- Floating Message / Requirements -->
+              <div class="form-group">
+                <textarea
+                  name="message"
+                  id="comment"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="comment">Tell us about your event (Date, guests, menu tier, etc.)</label>
+              </div>
 
               <button type="submit" id="button">
-                Send <i class="fa fa-paper-plane"></i>
+                Send Inquiry <i class="fa fa-paper-plane"></i>
               </button>
             </form>
           </div>
+
         </div>
       </main>
     </section>
+
+    <!-- Upgraded Footer -->
+    <footer style="margin-top: 50px;">
+      <img src="../images/mjcw.png" class="footer-logo" alt="Munna Catering Logo" />
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./about.html">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="../dist/Brochure-Menu.pdf" download>Download Menu</a></li>
+      </ul>
+      <p class="footer__copy">
+        &#169; 2026 The Algothrim. All rights reserved. Premium Design Overhaul.
+      </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#wrap"><span id="top-btn"><b>⬆</b></span></a>
 
     <script src="../dist/js/script.js"></script>
   </body>

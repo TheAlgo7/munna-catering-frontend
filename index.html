@@ -2,28 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Munna Catering Services</title>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Munna Catering Services" />
+    <title>Munna Catering Services - Luxury & Premium Catering in India</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Munna Catering Services offers exquisite luxury and premium catering for weddings, corporate events, and private house parties since 2010. Experience world cuisines, elegant setups, and bespoke services." />
     <meta name="author" content="The Algothrim" />
     <meta
       name="keywords"
       content="The Algothrim, Munna Catering, Premium Catering, Wedding Catering, Corporate Events Catering, House Party Catering, Sit-Down Dining, World Cuisines Buffet, Grazing Tables, Modern Delicacies, Crockery Services, Interior Decoration, Restaurant Services"
     />
 
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
     <link rel="icon" href="./images/mjc.png" type="image/png" />
     <link rel="stylesheet" href="./css/reset.min.css" />
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
   </head>
-  <body>
+  <body class="dark-theme">
     <section id="wrap">
+      <!-- Floating Glassmorphic Navbar -->
       <nav id="navbar">
-        <img src="./images/mjcw.png" />
+        <a href="./index.html">
+          <img src="./images/mjcw.png" class="logo" alt="Munna Catering Logo" />
+        </a>
         <input type="checkbox" id="burger-toggle" />
         <label for="burger-toggle" id="burger">
           <div class="burger-slice"></div>
@@ -32,182 +42,597 @@
         </label>
         <ul>
           <li><a href="#" id="active">Home</a></li>
-          <li><a href="./html/contact.html">Contact Us</a></li>
           <li><a href="./html/about.html">About Us</a></li>
+          <li><a href="./html/contact.html">Contact Us</a></li>
+          <li>
+            <!-- Theme Toggler -->
+            <div class="theme-switch-container">
+              <label class="theme-switch" for="theme-checkbox">
+                <input type="checkbox" id="theme-checkbox" />
+                <div class="slider-switch">
+                  <i class="fa fa-moon-o"></i>
+                  <i class="fa fa-sun-o"></i>
+                </div>
+              </label>
+            </div>
+          </li>
         </ul>
       </nav>
+
+      <!-- Stunning Hero Section -->
       <main id="main">
         <section id="jumbotron">
           <h1>
-            Welcome to<br />
-            Munna Catering Services
+            WELCOME TO<br />
+            <span>Munna Catering Services</span>
           </h1>
+          <p class="hero-subtitle">
+            Crafting memorable occasions since 2010. We pair exquisite culinary creations with flawless, luxurious setups to wow your guests and elevate your celebrations.
+          </p>
           <div id="service-btn-wrap">
-            <a href="#our-services"
-              ><span id="our-services-btn" class="service-btn"
-                >Catering <br />Services</span
-              ></a
-            >
-            <a href="#other-services"
-              ><span id="other-services-btn" class="service-btn"
-                >Crockery<br />
-                Services</span
-              ></a
-            >
-            <a href="./html/contact.html"
-              ><span id="contact-us-btn" class="service-btn"
-                >Contact <br />Us</span
-              ></a
-            >
-            <a href="./dist/Brochure-Menu.pdf" download
-              ><span class="service-btn">Download <br />Brochure</span></a
-            >
+            <a href="#our-services" class="service-btn">Catering Services</a>
+            <a href="#menu-showcase" class="service-btn btn-secondary">Explore Menu</a>
+            <a href="#budget-estimator" class="service-btn">Budget Estimator</a>
+            <a href="./dist/Brochure-Menu.pdf" download class="service-btn btn-secondary">
+              <i class="fa fa-download"></i> Brochure
+            </a>
           </div>
         </section>
       </main>
     </section>
 
-    <section id="our-services">
-      <h1>Our Catering Services</h1>
-      <div id="big-box">
-        <section id="premium-catering" class="our-services">
-          <h2>Premium <br />Catering</h2>
-          <div class="img-box"><img src="./images/1.jpeg" alt="" /></div>
-          <p>
-            Elevate your events with Munna Catering's premium catering services.
-            Immerse your guests in a delightful culinary journey...
-          </p>
-        </section>
-
-        <section id="elegant-wedding" class="our-services">
-          <h2>Elegant Wedding Catering</h2>
-          <div class="img-box"><img src="./images/2.jpeg" alt="" /></div>
-          <p>
-            Make your wedding day even more special with Munna Catering's
-            elegant wedding catering services...
-          </p>
-        </section>
-
-        <section id="corporate-events" class="our-services">
-          <h2>Corporate Events Catering</h2>
-          <div class="img-box"><img src="./images/3.jpeg" alt="" /></div>
-          <p>
-            Impress clients and colleagues alike with Munna Catering's corporate
-            events catering...
-          </p>
-        </section>
-
-        <section id="house-parties" class="our-services">
-          <h2>House Parties Catering</h2>
-          <div class="img-box"><img src="./images/4.jpeg" alt="" /></div>
-          <p>
-            Transform your house parties into unforgettable gatherings with
-            Munna Catering's house party catering services...
-          </p>
-        </section>
-
-        <section id="sit-down-dining" class="our-services">
-          <h2>Sit-Down Dining Experiences</h2>
-          <div class="img-box"><img src="./images/5.jpeg" alt="" /></div>
-          <p>
-            Experience the epitome of culinary class with Munna Catering's
-            sit-down dining services...
-          </p>
-        </section>
-
-        <section id="world-cuisines" class="our-services">
-          <h2>World Cuisines Buffet</h2>
-          <div class="img-box"><img src="./images/6.jpeg" alt="" /></div>
-          <p>
-            Take your guests on a global culinary journey with Munna Catering's
-            world cuisines buffet...
-          </p>
-        </section>
-
-        <section id="grazing-tables" class="our-services">
-          <h2>Grazing <br />Tables</h2>
-          <div class="img-box"><img src="./images/7.jpeg" alt="" /></div>
-          <p>
-            Elevate your event's aesthetics with Munna Catering's grazing
-            tables...
-          </p>
-        </section>
-
-        <section id="delicacies-modern-world" class="our-services">
-          <h2>Delicacies of the Modern World</h2>
-          <div class="img-box"><img src="./images/8.jpeg" alt="" /></div>
-          <p>
-            Munna Catering takes pride in serving delicacies inspired by the
-            modern world...
-          </p>
-        </section>
-      </div>
-      <a href="#wrap"
-        ><span id="top-btn"><b>⬆</b></span></a
-      >
-    </section>
-
-    <section id="other-services">
-      <h1>Our Crockery Services</h1>
-      <div id="small-box">
-        <a href="#"
-          ><span
-            ><img src="./images/slide1.jpeg" />
-            <h3>Bone China Crockery</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide2.jpeg" />
-            <h3>Buffet LED Counter</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide3.jpeg" />
-            <h3>Elegant Wedding Budget Set-Up</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide4.jpeg" />
-            <h3>Interior Decoration for Events</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide5.jpeg" />
-            <h3>Restaurant Services</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide6.jpeg" />
-            <h3>Cuisines and Tablewares</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide7.jpeg" />
-            <h3>Host with Style</h3></span
-          ></a
-        >
-        <a href="#"
-          ><span
-            ><img src="./images/slide8.jpeg" />
-            <h3>Dining Experience</h3></span
-          ></a
-        >
-      </div>
-      <a href="./html/about.html"
-        ><span id="contact-us-btn" class="service-btn"
-          >Click to Know About Us</span
-        ></a
-      >
-      <p class="footer__copy" style="font-weight: bold; color: #5d4037">
-        &#169; 2024 The Algothrim. All rights reserved
+    <!-- catering services Section -->
+    <section id="our-services" class="section-padding">
+      <h1 class="reveal">Our Catering Services</h1>
+      <p class="section-desc reveal">
+        We deliver exceptional culinary experiences tailored precisely to your style. Explore our premium catering services.
       </p>
+      
+      <div id="big-box">
+        <article id="premium-catering" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/1.jpeg" alt="Premium Catering Setup" />
+          </div>
+          <h2>Premium<br />Catering</h2>
+          <p>
+            Immerse your guests in a delightful culinary journey. Munna Catering provides curated gourmet dishes prepared with farm-fresh organic ingredients, perfect for milestones.
+          </p>
+        </article>
+
+        <article id="elegant-wedding" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/2.jpeg" alt="Elegant Wedding Table" />
+          </div>
+          <h2>Elegant Wedding Catering</h2>
+          <p>
+            Make your wedding day magical with bespoke menus, breathtaking presentations, and service designed to fit royal tastes. Every element is refined with utmost care.
+          </p>
+        </article>
+
+        <article id="corporate-events" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/3.jpeg" alt="Corporate Buffet Presentation" />
+          </div>
+          <h2>Corporate Events Catering</h2>
+          <p>
+            Impress clients and colleagues with clean, high-performance catering for meetings, conferences, and annual functions. Seamless setups suited for fast-paced events.
+          </p>
+        </article>
+
+        <article id="house-parties" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/4.jpeg" alt="Private House Party Catering" />
+          </div>
+          <h2>House Parties Catering</h2>
+          <p>
+            Transform private house gatherings into memorable bashes. We bring exquisite cuisines directly to your dining room, matching your theme and host style perfectly.
+          </p>
+        </article>
+
+        <article id="sit-down-dining" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/5.jpeg" alt="Sit Down Fine Dining Plate" />
+          </div>
+          <h2>Sit-Down Dining Experiences</h2>
+          <p>
+            Experience pure culinary luxury. Multi-course sit-down plating designed by master chefs, synchronized serving timelines, and elegant menu pairings.
+          </p>
+        </article>
+
+        <article id="world-cuisines" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/6.jpeg" alt="World Cuisines Buffet Spread" />
+          </div>
+          <h2>World Cuisines Buffet</h2>
+          <p>
+            Take your guests on a global taste tour. From traditional Indian recipes to European, Pan-Asian, and American culinary setups cooked live at the counters.
+          </p>
+        </article>
+
+        <article id="grazing-tables" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/7.jpeg" alt="Artisanal Grazing Table Setup" />
+          </div>
+          <h2>Grazing<br />Tables</h2>
+          <p>
+            Combine artistry with gourmet snacking. Beautifully composed charcuterie boards, gourmet cheese grids, fresh berries, exotic artisanal dips, and sourdough boards.
+          </p>
+        </article>
+
+        <article id="delicacies-modern-world" class="our-services reveal">
+          <div class="img-box">
+            <img src="./images/8.jpeg" alt="Modern Molecular Gastronomy" />
+          </div>
+          <h2>Delicacies of the Modern World</h2>
+          <p>
+            Delight your guests with modern cooking trends, molecular gastronomy concepts, fusion delicacies, and trendsetting mocktail bars that represent 2026.
+          </p>
+        </article>
+      </div>
     </section>
+
+    <!-- SIGNATURE CUISINES SECTION -->
+    <section id="menu-showcase" class="section-padding">
+      <h1 class="reveal">Signature Menu Showcase</h1>
+      <p class="section-desc reveal">
+        A sneak peek into our luxury menu offerings. Filter categories below to explore our popular delicacies.
+      </p>
+
+      <div class="menu-tabs reveal">
+        <button class="menu-tab-btn active-tab" data-filter="all">All Specialties</button>
+        <button class="menu-tab-btn" data-filter="north-indian">North Indian</button>
+        <button class="menu-tab-btn" data-filter="awadhi">Awadhi & Mughlai</button>
+        <button class="menu-tab-btn" data-filter="pan-asian">Pan-Asian & Global</button>
+        <button class="menu-tab-btn" data-filter="desserts">Exquisite Desserts</button>
+      </div>
+
+      <div class="menu-grid reveal">
+        <!-- North Indian -->
+        <article class="menu-card" data-category="north-indian">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Paneer Tikka Angara</h3>
+          <p class="menu-desc">Organic paneer cubes marinated in high-grade hand-pound spices, char-grilled over charcoal to smoky perfection.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Smoky</span>
+            <span class="menu-tag">Spicy</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="north-indian">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Dal Bukhara</h3>
+          <p class="menu-desc">Black lentils slow-cooked overnight with cream and house butter over tandoor embers, offering a rich, legendary silkiness.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Slow Cooked</span>
+            <span class="menu-tag">Legendary</span>
+          </div>
+        </article>
+
+        <!-- Awadhi -->
+        <article class="menu-card" data-category="awadhi">
+          <div class="menu-card-header">
+            <span class="menu-item-type nonveg">Non-Veg</span>
+          </div>
+          <h3>Royal Awadhi Dum Biryani</h3>
+          <p class="menu-desc">Long-grain aromatic Basmati rice layered with tender marinated meat, infused with saffron, rose water, and dum-cooked.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Saffron</span>
+            <span class="menu-tag">Traditional</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="awadhi">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Subz Galouti Kebab</h3>
+          <p class="menu-desc">Melt-in-your-mouth minced seasonal vegetables patties flavored with saffron, rose petal powder, and royal spices.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Awadhi</span>
+            <span class="menu-tag">Signature</span>
+          </div>
+        </article>
+
+        <!-- Pan-Asian -->
+        <article class="menu-card" data-category="pan-asian">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Truffle Edamame Dumplings</h3>
+          <p class="menu-desc">Translucent crystal skin pockets filled with mashed edamame and water chestnut, drizzled with premium black truffle oil.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Gourmet</span>
+            <span class="menu-tag">Truffle</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="pan-asian">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Fiery Thai Green Curry</h3>
+          <p class="menu-desc">A fragrant coconut milk broth simmered with fresh lemongrass, galangal, kaffir lime, and baby organic harvest vegetables.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Spicy</span>
+            <span class="menu-tag">Fragrant</span>
+          </div>
+        </article>
+
+        <!-- Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Baked Saffron Shahi Tukda</h3>
+          <p class="menu-desc">Gold-crusted brioche bread soaked in rich saffron rabri, garnished with gold foil, sliced pistachios, and almonds.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Royal Sweet</span>
+            <span class="menu-tag">Gold Foil</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-card-header">
+            <span class="menu-item-type veg">Veg</span>
+          </div>
+          <h3>Molecular Nitrogen Kulfi</h3>
+          <p class="menu-desc">Classic creamy hand-churned kulfi frozen instantly in front of guests, topped with rose petal foam and pistachios.</p>
+          <div class="menu-tags">
+            <span class="menu-tag">Live Counter</span>
+            <span class="menu-tag">Modern</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- crockery services Section -->
+    <section id="other-services" class="section-padding">
+      <h1 class="reveal">Our Crockery & setups</h1>
+      <p class="section-desc reveal">
+        We provide the complete physical environment for a lavish event. Explore our premium tableware and decorations.
+      </p>
+      
+      <div id="small-box">
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide1.jpeg" alt="Bone China Tableware" />
+          </div>
+          <h3>Bone China Crockery</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide2.jpeg" alt="Buffet LED Counter Setup" />
+          </div>
+          <h3>Buffet LED Counter</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide3.jpeg" alt="Elegant Wedding Budget Set-Up" />
+          </div>
+          <h3>Elegant Wedding Budget Set-Up</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide4.jpeg" alt="Interior Event Decoration" />
+          </div>
+          <h3>Interior Decoration for Events</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide5.jpeg" alt="Restaurant Grade Services" />
+          </div>
+          <h3>Restaurant Services</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide6.jpeg" alt="Luxury Cuisines and Tablewares" />
+          </div>
+          <h3>Cuisines and Tablewares</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide7.jpeg" alt="Table Setting Host with Style" />
+          </div>
+          <h3>Host with Style</h3>
+        </article>
+
+        <article class="crockery-card reveal">
+          <div class="crockery-img-box">
+            <img src="./images/slide8.jpeg" alt="Premium Dining Setup" />
+          </div>
+          <h3>Dining Experience</h3>
+        </article>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE BUDGET ESTIMATOR WIDGET -->
+    <section id="budget-estimator" class="section-padding">
+      <div class="estimator-container">
+        <h1 class="reveal">Interactive Cost Estimator</h1>
+        <p class="section-desc reveal">
+          Get an instant estimated price range for your catering needs based on guest count, tier, and service options.
+        </p>
+
+        <div class="estimator-wrapper reveal">
+          <!-- Left side: inputs -->
+          <div class="estimator-form">
+            <!-- Event Select -->
+            <div class="estimator-group">
+              <h3>1. Select Event Type</h3>
+              <div class="event-selector-grid">
+                <div class="selector-card active-card" data-event="wedding">
+                  <i class="fa fa-heart"></i>
+                  <span>Wedding</span>
+                </div>
+                <div class="selector-card" data-event="corporate">
+                  <i class="fa fa-building"></i>
+                  <span>Corporate</span>
+                </div>
+                <div class="selector-card" data-event="party">
+                  <i class="fa fa-glass"></i>
+                  <span>House Party</span>
+                </div>
+                <div class="selector-card" data-event="anniversary">
+                  <i class="fa fa-gift"></i>
+                  <span>Celebration</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guest Range -->
+            <div class="estimator-group">
+              <h3>2. Number of Guests</h3>
+              <div class="range-slider-wrap">
+                <div class="slider-values">
+                  <span>Guest count:</span>
+                  <span class="highlight" id="guest-count-val">200 Guests</span>
+                </div>
+                <input
+                  type="range"
+                  min="50"
+                  max="1000"
+                  step="25"
+                  value="200"
+                  class="estimator-range"
+                  id="guest-slider"
+                />
+              </div>
+            </div>
+
+            <!-- Menu Tier -->
+            <div class="estimator-group">
+              <h3>3. Choose Menu Tier</h3>
+              <div class="tier-selector-grid">
+                <div class="tier-card active-tier" data-multiplier="500" data-tier-name="Classic">
+                  <h4>Classic</h4>
+                  <span>₹500 / Plate</span>
+                </div>
+                <div class="tier-card" data-multiplier="1100" data-tier-name="Premium">
+                  <h4>Premium</h4>
+                  <span>₹1,100 / Plate</span>
+                </div>
+                <div class="tier-card" data-multiplier="1800" data-tier-name="Imperial">
+                  <h4>Imperial</h4>
+                  <span>₹1,800 / Plate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add-ons -->
+            <div class="estimator-group">
+              <h3>4. Add-on Services</h3>
+              <div class="options-selector-grid">
+                <label class="option-checkbox-wrap" for="opt-crockery">
+                  <input type="checkbox" id="opt-crockery" value="80" data-name="Bone China Crockery" />
+                  <span>Bone China Tableware</span>
+                </label>
+                <label class="option-checkbox-wrap" for="opt-led">
+                  <input type="checkbox" id="opt-led" value="150" data-name="LED Buffet Counter" />
+                  <span>LED Buffet Counter</span>
+                </label>
+                <label class="option-checkbox-wrap" for="opt-live">
+                  <input type="checkbox" id="opt-live" value="250" data-name="Live Counter Prep" />
+                  <span>Live Prep Counters</span>
+                </label>
+                <label class="option-checkbox-wrap" for="opt-decor">
+                  <input type="checkbox" id="opt-decor" value="200" data-name="Floral Event Decor" />
+                  <span>Floral Event Decor</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: display estimate -->
+          <div class="estimator-result-pane">
+            <h3>Estimated Investment</h3>
+            <div class="estimated-price" id="calc-range">₹1,00,000 - ₹1,20,000</div>
+            <div class="price-range-lbl">Total estimated budget for catering</div>
+            
+            <div class="estimator-details-list">
+              <div class="estimator-detail-row">
+                <span>Event Type:</span>
+                <strong id="summary-event">Wedding</strong>
+              </div>
+              <div class="estimator-detail-row">
+                <span>Total Guests:</span>
+                <strong id="summary-guests">200 Guests</strong>
+              </div>
+              <div class="estimator-detail-row">
+                <span>Menu Tier Selected:</span>
+                <strong id="summary-tier">Classic</strong>
+              </div>
+              <div class="estimator-detail-row">
+                <span>Custom Add-ons:</span>
+                <strong id="summary-addons">None Selected</strong>
+              </div>
+            </div>
+
+            <button type="button" class="service-btn" id="estimator-book-btn">
+              Book Inquiry Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SLIDER SECTION -->
+    <section id="testimonials" class="section-padding">
+      <div class="testimonials-container">
+        <h1 class="reveal">What Our Clients Say</h1>
+        <p class="section-desc reveal">
+          Real feedback from hosts who chose Munna Catering Services for their special occasions.
+        </p>
+
+        <div class="testimonials-slider-wrap reveal">
+          <!-- Slide 1 -->
+          <div class="testimonial-slide active-slide">
+            <div class="testimonial-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "We hired Munna Catering Services for our wedding of 500 guests. The Awadhi dum biryani was a spectacular hit! The LED counters looked stunning and their staff was extremely polite and hygienic. Simply flawless."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div class="author-meta">
+                <h4>Aditya &amp; Riya Sharma</h4>
+                <p>Wedding Ceremony at Grand Palace, Delhi</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Outstanding catering quality! Our corporate annual summit required precise timelines and gourmet dishes. The molecular nitrogen kulfi live counter was an absolute showstopper. Will definitely book again."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div class="author-meta">
+                <h4>Siddharth Kapoor</h4>
+                <p>Operations VP, TechSolutions Ltd</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "We hosted a private house dinner for 80 guests. Munna Catering handled everything including bone china plates and dining decorations. The Truffle Edamame Dumplings was highly praised. Warmly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div class="author-meta">
+                <h4>Meera Oberoi</h4>
+                <p>Private House Party Host, Gurugram</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls reveal">
+          <div class="slider-dot active-dot" data-slide="0"></div>
+          <div class="slider-dot" data-slide="1"></div>
+          <div class="slider-dot" data-slide="2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQS SECTION -->
+    <section id="faqs" class="section-padding">
+      <div class="faq-container">
+        <h1 class="reveal">Frequently Asked Questions</h1>
+        <p class="section-desc reveal">
+          Have queries about bookings, locations, or food? We have answers.
+        </p>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            <h3>What is the minimum guest size required for booking?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-content">
+            <p>For large services (such as setups, live counters, LED buffers), our minimum guest size is usually 50 guests. However, for exclusive sit-down chef table dining, we can cater to smaller premium gatherings from 20 guests onwards.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            <h3>Do you offer customized menus for food restrictions?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-content">
+            <p>Absolutely! We specialize in catering to gluten-free, vegan, nut-free, Jain-friendly, and other organic food requests. Our menu planner will craft a menu keeping all food alerts in mind.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            <h3>Do you travel outside the local NCR area for catering?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-content">
+            <p>Yes, Munna Caterers travels across India for premium wedding events. We have successfully catered to celebrations in Rajasthan, Himachal, Punjab, and Uttar Pradesh. Travel charges are added based on locations.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-header">
+            <h3>How far in advance should we secure our dates?</h3>
+            <div class="faq-icon">+</div>
+          </div>
+          <div class="faq-content">
+            <p>For prime wedding seasons (November to February), we recommend booking 4 to 6 months in advance. For corporate events or minor gatherings, 2 to 3 weeks ahead is usually sufficient to secure dates and select options.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upgraded Footer -->
+    <footer>
+      <img src="./images/mjcw.png" class="footer-logo" alt="Munna Catering Logo" />
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="./html/about.html">About Us</a></li>
+        <li><a href="./html/contact.html">Contact Us</a></li>
+        <li><a href="./dist/Brochure-Menu.pdf" download>Download Menu</a></li>
+      </ul>
+      <p class="footer__copy">
+        &#169; 2026 The Algothrim. All rights reserved. Premium Design Overhaul.
+      </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#wrap"><span id="top-btn"><b>⬆</b></span></a>
 
     <script src="./dist/js/script.js"></script>
   </body>

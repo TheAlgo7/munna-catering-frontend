@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>About Us - Munna Catering Services</title>
-    <meta name="viewport" content="width=device-width" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover the story, history, and core values of Munna Catering Services. Serving exquisite flavors and establishing celebratory milestones since 2010." />
+    
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Poppins:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -18,46 +19,128 @@
     <link rel="stylesheet" href="../css/reset.min.css" />
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
   </head>
-  <body>
+  <body class="dark-theme">
     <section id="wrap">
+      <!-- Floating Navbar -->
       <nav id="navbar">
-        <img src="../images/mjcw.png" />
+        <a href="../index.html">
+          <img src="../images/mjcw.png" class="logo" alt="Munna Catering Logo" />
+        </a>
         <input type="checkbox" id="burger-toggle" />
-        <div id="burger">
+        <label for="burger-toggle" id="burger">
           <div class="burger-slice"></div>
           <div class="burger-slice"></div>
           <div class="burger-slice"></div>
-        </div>
+        </label>
         <ul>
           <li><a href="../index.html">Home</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
           <li><a href="#" id="active">About Us</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <li>
+            <!-- Theme Toggler -->
+            <div class="theme-switch-container">
+              <label class="theme-switch" for="theme-checkbox">
+                <input type="checkbox" id="theme-checkbox" />
+                <div class="slider-switch">
+                  <i class="fa fa-moon-o"></i>
+                  <i class="fa fa-sun-o"></i>
+                </div>
+              </label>
+            </div>
+          </li>
         </ul>
       </nav>
 
+      <!-- Glassmorphic Content Panel -->
       <main id="container-wrap">
         <div id="about-us" class="glass-panel">
-          <h2>About Us</h2>
-
-          <h3>Since 2010</h3>
-          <p>
-            With more than 1000 events across India, Munna Caterer has been a
-            part of celebrations since 2010. Whether it's a romantic wedding, an
-            American barbecue, a cheerful birthday, or a slick corporate event,
-            we understand the uniqueness of each occasion.
+          <h2>Our Legacy &amp; Journey</h2>
+          
+          <p style="font-size: 1.1rem; margin-bottom: 30px;">
+            Munna Catering Services has been at the forefront of creating culinary memories. From romantic royal weddings and sleek corporate seminars to intimate family house gatherings, we deliver bespoke tastes cooked with love.
           </p>
-          <br />
 
-          <h3>Authentic Indian Cuisine</h3>
-          <p>
-            India, known for its diverse cultures, is best understood through
-            its rich food. Our philosophy centers around providing you with the
-            best-in-class food made with fresh organic ingredients. Every meal
-            we provide is cooked with utmost care and served with love!
-          </p>
+          <!-- History Timeline -->
+          <div class="timeline-wrap">
+            <div class="timeline-item">
+              <h3>2010 - The Humble Beginning</h3>
+              <p>Founded by culinary enthusiasts with a vision to bring authentic Indian flavors and premium hospitality services directly to NCR households. We began with private dinners and intimate house caterings.</p>
+            </div>
+            
+            <div class="timeline-item">
+              <h3>2016 - Tableware &amp; setup Overhaul</h3>
+              <p>Recognizing that presentation is half the meal, we expanded into dedicated crockery services, importing high-end Bone China tableware, building custom event decors, and creating buffet counters.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2020 - Crossing 1,000 Major Events</h3>
+              <p>Celebrated a major milestone of catering over 1,000 wedding and corporate celebrations across major states in Northern India, refining processes to manage massive guest lists with consistency.</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2026 - Modern Culinary Pioneers</h3>
+              <p>Today, we integrate modern trends like molecular gastronomy counters, organic farm-to-table selections, and global cuisine menus with classical Indian culinary roots, delivering state-of-the-art experiences.</p>
+            </div>
+          </div>
+
+          <!-- Our Pillars -->
+          <h2 style="margin-top: 50px;">Our Core Pillars</h2>
+          <p style="margin-bottom: 25px;">Why hosts trust Munna Catering Services for their most treasured moments:</p>
+          
+          <div class="pillars-grid">
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa fa-shield"></i>
+              </div>
+              <h3>Flawless Hygiene</h3>
+              <p>Uncompromising hygiene protocols across preparation, transportation, and serving. Pure organic materials and clean setups.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa fa-cutlery"></i>
+              </div>
+              <h3>Premium Taste</h3>
+              <p>Recipes curated by seasoned master chefs using house-ground spices. Exquisite flavors that linger in memory.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa fa-paint-brush"></i>
+              </div>
+              <h3>Bespoke Setup</h3>
+              <p>Visually stunning LED buffet arrays, dining themes, fine crockery, and bespoke floral decors tailored to your theme.</p>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa fa-users"></i>
+              </div>
+              <h3>Polite Service</h3>
+              <p>Warm hospitality delivered by trained professionals and waitstaff who understand customer service rules.</p>
+            </div>
+          </div>
+
         </div>
       </main>
     </section>
+
+    <!-- Upgraded Footer -->
+    <footer style="margin-top: 50px;">
+      <img src="../images/mjcw.png" class="footer-logo" alt="Munna Catering Logo" />
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="../dist/Brochure-Menu.pdf" download>Download Menu</a></li>
+      </ul>
+      <p class="footer__copy">
+        &#169; 2026 The Algothrim. All rights reserved. Premium Design Overhaul.
+      </p>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#wrap"><span id="top-btn"><b>⬆</b></span></a>
 
     <script src="../dist/js/script.js"></script>
   </body>
