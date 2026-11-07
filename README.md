@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="docs/readme/hero.png" alt="Munna Catering: good food, memorable occasions" width="100%">
+  <picture>
+    <source media="(max-width: 600px)" srcset="docs/readme/hero-mobile.webp">
+    <img src="docs/readme/hero.webp" alt="Munna Catering Services: the website's home section on a laptop and a phone" width="100%">
+  </picture>
 </p>
 
 <p align="center">
@@ -8,17 +11,10 @@
 </p>
 
 <p align="center">
-  <a href="#what-the-site-covers">What it covers</a>
-  &nbsp;·&nbsp;
-  <a href="#how-it-works">How it works</a>
-  &nbsp;·&nbsp;
+  <a href="#what-it-looks-like">What it looks like</a> ·
+  <a href="#what-the-site-covers">What the site covers</a> ·
+  <a href="#how-it-works">How it works</a> ·
   <a href="#run-it-locally">Run it locally</a>
-</p>
-
-<p align="center">
-  <img alt="Vanilla HTML, CSS and JS" src="https://img.shields.io/badge/stack-vanilla%20HTML%2C%20CSS%2C%20JS-C99652?style=flat-square&labelColor=111111">
-  <img alt="Client website" src="https://img.shields.io/badge/type-client%20website-C99652?style=flat-square&labelColor=111111">
-  <img alt="Archived" src="https://img.shields.io/badge/status-archived-777777?style=flat-square&labelColor=111111">
 </p>
 
 ## The brief
@@ -27,30 +23,22 @@ A real business needed to look established online, earn trust before anyone read
 
 The site is no longer hosted. This repository keeps it, and it runs from any static server.
 
-## Screenshots
 
-<p align="center">
-  <img src="docs/readme/desktop-budget-estimator.png" width="100%" alt="The cost estimator">
-</p>
+## What it looks like
 
-<table>
-  <tr>
-    <td align="center"><img src="docs/readme/desktop-our-services.png" width="100%" alt="Services"><br><sub>Services</sub></td>
-    <td align="center"><img src="docs/readme/desktop-menu-showcase.png" width="100%" alt="The menu"><br><sub>The signature menu</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/readme/desktop-testimonials.png" width="100%" alt="Testimonials"><br><sub>What clients said</sub></td>
-    <td align="center"><img src="docs/readme/desktop-faqs.png" width="100%" alt="Questions"><br><sub>Common questions</sub></td>
-  </tr>
-</table>
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/readme/menu-mobile.webp">
+  <img src="docs/readme/menu.webp" alt="Menu by cuisine: the signature menu showcase and the catering services on two laptops" width="100%">
+</picture>
 
-<p align="center">
-  <img src="docs/readme/phone.png" width="200" alt="On a phone">
-  &nbsp;&nbsp;
-  <img src="docs/readme/phone-menu.png" width="200" alt="The menu on a phone">
-  &nbsp;&nbsp;
-  <img src="docs/readme/phone-budget.png" width="200" alt="The estimator on a phone">
-</p>
+**Menu by cuisine.** Signature dishes filtered by cuisine, with the services and set-ups on offer.
+
+<picture>
+  <source media="(max-width: 600px)" srcset="docs/readme/estimate-mobile.webp">
+  <img src="docs/readme/estimate.webp" alt="An instant estimate: the cost estimator on a laptop and a phone" width="100%">
+</picture>
+
+**An instant estimate.** The event, the guest count and the menu tier give a price range before anyone calls.
 
 ## What the site covers
 
@@ -62,6 +50,7 @@ The site is no longer hosted. This repository keeps it, and it runs from any sta
 - **Testimonials and FAQs** for the questions every client asks.
 - **Dark and light themes**, remembered on the device.
 
+
 ## How it works
 
 - **Static pages.** `index.html`, `html/about.html` and `html/contact.html`, one stylesheet, and `js/script.js` for the theme, the menu filter and the estimator.
@@ -69,7 +58,11 @@ The site is no longer hosted. This repository keeps it, and it runs from any sta
 - **Reveal on scroll.** Sections animate in as they enter the viewport.
 - **Build.** Babel compiles `js/` into `dist/js/` for older browsers.
 
+
 ## Run it locally
+
+<details>
+<summary><strong>Setup and commands</strong></summary>
 
 ```bash
 git clone https://github.com/TheAlgo7/munna-catering-frontend.git
@@ -78,6 +71,10 @@ python -m http.server 8124
 ```
 
 Open http://localhost:8124. With that server running, `python scripts/readme-shots.py` rebuilds the screenshots in this README.
+
+The pictures on this page come from `scripts/readme-shots.py` (captures in `docs/readme/src/assets`) and `docs/readme/src/readme.js`, drawn by The Algothrim's README Kit.
+
+</details>
 
 ## Licence
 
